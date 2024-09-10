@@ -1,13 +1,8 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000; // Use PORT from environment or default to 3000
+const port = process.env.PORT || 10000; // Use PORT from environment or default to 10000
 
-// Root route
-app.get('/', (req, res) => {
-  res.send('Welcome to the Node.js server!');
-});
-
-// Existing routes
+// Define routes
 app.get('/subject', (req, res) => {
   res.send('ITE314');
 });
@@ -29,5 +24,5 @@ app.get('/mydata', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
